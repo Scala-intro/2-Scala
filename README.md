@@ -3,6 +3,7 @@
 2. [Simplificación de funciones](#schema2)
 3. [Funciones lambda](#schema3)
 4. [Transformaciones](#schema4)
+5. [Bucles](#schema5)
 <hr>
 
 <a name="schema1"></a>
@@ -83,3 +84,35 @@ val salarioDoblados = salarios.map(x => x*2)
 
 ~~~
 ![scala](./images/005.png)
+
+<hr>
+
+<a name="schema5"></a>
+
+
+# 5. Bucles
+~~~scala
+for (i <- 1 until 3){
+    println(i + "*")
+}
+~~~
+![scala](./images/006.png)
+
+Bucles anidados
+Hay dos formas de hacerlo, esta primera es la más habitual.
+~~~scala
+for (i <- 1 until 3; j <- "abc"){
+    println(s"${i} ${j}")
+}
+~~~
+![scala](./images/007.png)
+
+~~~scala
+(1 until 3).foreach{
+    i => "abc".foreach{
+        j => println(s"${i} ${j}")
+    }
+}
+~~~
+
+![scala](./images/008.png)
