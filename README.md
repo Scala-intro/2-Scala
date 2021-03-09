@@ -4,6 +4,7 @@
 3. [Funciones lambda](#schema3)
 4. [Transformaciones](#schema4)
 5. [Bucles](#schema5)
+6. [Bloques - POO](#schema6)
 <hr>
 
 <a name="schema1"></a>
@@ -116,3 +117,42 @@ for (i <- 1 until 3; j <- "abc"){
 ~~~
 
 ![scala](./images/008.png)
+
+
+<hr>
+
+<a name="schema6"></a>
+
+
+# 6. Bloques - POO
+- Bloques
+~~~scala
+println("Hola mundo")
+~~~
+
+![scala](./images/009.png)
+~~~scala
+println({
+    val x = 1 + 1
+    x + 1 
+})
+~~~
+![scala](./images/010.png)
+- POO
+
+Las clases en scala se declaran con la palabra `class`
+Pero hay un tipo especial que son las `case class` son clases que solo tiene info.
+~~~scala
+case class Punto(x : Int, y : Int)
+val punto = Punto(1,2)
+val otroPunto = Punto(3,7)
+~~~
+![scala](./images/011.png)
+
+~~~scala
+case class Usuario(nombre: String, edad : Int)
+val juan = Usuario("Juan", 45)
+val maria = Usuario("Maria",34)
+~~~
+![scala](./images/012.png)
+
