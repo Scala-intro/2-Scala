@@ -2,6 +2,7 @@
 1. [Funciones](#schema1)
 2. [Simplificación de funciones](#schema2)
 3. [Funciones lambda](#schema3)
+4. [Transformaciones](#schema4)
 <hr>
 
 <a name="schema1"></a>
@@ -38,7 +39,8 @@ println(s"El resultado del cubo es: ${resultadoCubo2}")
 
 
 # 3. Funciones lambda
-Una función lambda puede recibir como parámetro otra función y puede devolver otro función
+Una función lambda puede recibir como parámetro otra función y puede devolver otro función.
+También conocidas por funciones anónimas, porque no tiene nombre ni def
 
 ~~~scala
 def sumar(f:Int => Int)={
@@ -47,3 +49,37 @@ def sumar(f:Int => Int)={
 sumar(obtenerCubo2)
 ~~~
 ![scala](./images/003.png)
+
+~~~scala
+(x:Int =>x*2) 
+~~~
+función lambda o anónima, pero así no se trabaja pq se tiene que asociar a una variable
+~~~scala 
+val doblarSalarios = (x:Int)=> x*2
+~~~
+
+<hr>
+
+<a name="schema4"></a>
+
+
+# 4. Transformaciones
+
+~~~scala
+//salarios de empleados
+//colecciones : Secuencias
+val salarios = Seq(3000,4000,6000,8000)
+
+val doblarSalarios = (x:Int)=> x*2
+val salarioDoblados = salarios.map(doblarSalarios)
+
+~~~
+![scala](./images/004.png)
+
+Nos ahorramos el declarar una variable ya que con `.map` mapeamos a todos los elementos de salarios los que nos dice la función
+~~~scala
+val salarios = Seq(3000,4000,6000,8000)
+val salarioDoblados = salarios.map(x => x*2)
+
+~~~
+![scala](./images/005.png)
