@@ -5,6 +5,8 @@
 4. [Transformaciones](#schema4)
 5. [Bucles](#schema5)
 6. [Bloques - POO](#schema6)
+7. [Lista (List)](#schema7)
+8. [Mapas (Maps)o diccionarios](#schema8)
 <hr>
 
 <a name="schema1"></a>
@@ -156,3 +158,39 @@ val maria = Usuario("Maria",34)
 ~~~
 ![scala](./images/012.png)
 
+<hr>
+
+<a name="schema7"></a>
+
+# 7. Lista (List)
+~~~scala
+val juan = Usuario("Juan", 45)
+val maria = Usuario("Maria",34)
+val pedro = Usuario("Pedro",67)
+~~~
+~~~scala
+val usuarios = List(juan, maria, pedro)
+val primerUsuario = usuarios(0) //primer valor
+~~~
+![scala](./images/013.png)
+Podemos iterar sobre las listas
+
+~~~scala
+for(usuario <- usuarios){
+    println(s"Nombre usario ${usuario.nombre} de edad ${usuario.edad}")
+}
+~~~
+![scala](./images/014.png)
+<hr>
+
+<a name="schema8"></a>
+
+# 8. Mapas (Maps) o diccionarios
+Los `Map`se inicializan:
+**val nomnbre_coleccion = Map(clave->valor)**
+Y se acceden a través de la clave
+~~~scala
+val miColeccion = Map("a"->34, "b"->12)
+val datoA = miColeccion.get("a")
+~~~
+![scala](./images/015.png)
