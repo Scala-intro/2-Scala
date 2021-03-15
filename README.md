@@ -7,6 +7,7 @@
 6. [Bloques - POO](#schema6)
 7. [Lista (List)](#schema7)
 8. [Mapas (Maps)o diccionarios](#schema8)
+9. [Tuplas](#schema9)
 <hr>
 
 <a name="schema1"></a>
@@ -194,3 +195,20 @@ val miColeccion = Map("a"->34, "b"->12)
 val datoA = miColeccion.get("a")
 ~~~
 ![scala](./images/015.png)
+
+<hr>
+
+<a name="schema9"></a>
+
+# 8. Tuplas
+Las tuplas se inicializan con paréntesis:
+~~~scala
+val elemento = ("Coche", 4)
+~~~
+Inician en el 1 no como las listas que comienzan en el 0.
+
+Se selecionan los elementos:
+~~~scala
+elemento._1 //elemento 1, "Coche"
+elemento._2 //elemento 2, 4
+~~~
